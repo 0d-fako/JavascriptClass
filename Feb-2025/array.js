@@ -9,6 +9,9 @@ arrayOfNumbers.push(2);
 
 console.log(arrayOfNumbers);
 
+arrayOfNumbers.splice(1, 2, 9, 10);
+
+console.log(arrayOfNumbers);
 
 arrayOfNumbers.shift();
 
@@ -16,6 +19,15 @@ arrayOfNumbers.unshift(0);
 
 console.log(arrayOfNumbers);
 
+
+let shallowCopy = arrayOfNumbers.slice(undefined, 3);
+
+
+let deepCopy = JSON.parse(JSON.stringify(arrayOfNumbers));
+
+console.log(deepCopy);
+
+console.log(shallowCopy);
 let firstName =  123;
 
 console.log(firstName);
