@@ -10,6 +10,12 @@ arrayOfNumbers.push(2);
 console.log(arrayOfNumbers);
 
 
+arrayOfNumbers.shift();
+
+arrayOfNumbers.unshift(0);
+
+console.log(arrayOfNumbers);
+
 let firstName =  123;
 
 console.log(firstName);
