@@ -1,4 +1,4 @@
-function arrayToObject(array){
+function arrayToObjects(array){
     const convertedArrayObject = {};
     
     for(let number = 0; number < array.length; number++){
@@ -11,4 +11,4 @@ function arrayToObject(array){
     return convertedArrayObject;    
 }
 
-console.log(arrayToObject([2, 2, 1, 3, 5, 5]));
+console.log(arrayToObjects([2, 2, 1, 3, 5, 5]));
