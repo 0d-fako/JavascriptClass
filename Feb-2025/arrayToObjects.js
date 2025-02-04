@@ -11,4 +11,4 @@ function arrayToObjects(array){
     return convertedArrayObject;    
 }
 
-console.log(arrayToObjects([2, 2, 1, 3, 5, 5]));
+module.exports = arrayToObjects
