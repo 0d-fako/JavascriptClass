@@ -8,3 +8,11 @@ arrayOfNumbers.push(2);
 
 console.log(arrayOfNumbers);
 
+
+let firstName =  Array.of("Olumide", "John", "Doe");
+
+console.log(firstName);
+
+let lastName = Array.from(firstName);
+
+console.log(lastName);
