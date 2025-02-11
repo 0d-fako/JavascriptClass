@@ -5,11 +5,15 @@ function printStudentName(Object) {
 }
 
 function printStudentSecondCourse(Object) {
-    return Object.hobbies[1];
+    return Object.courses[1];
 }
 
-function printStudentZip(student) {
+function printStudentZip(Object) {
     return Object.address.zip;
 }
 
-module.exports = { printStudentName, printStudentSecondCourse, printStudentZip };
+
+function getDetails(Object) {
+    return `${Object.name} is ${Object.age} years old and lives at ${Object.address.street}, ${Object.address.city}, ${Object.address.zip}.`;
+}
+module.exports = { printStudentName, printStudentSecondCourse, printStudentZip, getDetails };
