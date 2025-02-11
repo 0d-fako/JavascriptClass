@@ -8,7 +8,7 @@ const person = {
 
 function displayKeysAndValues(object){
     for(const key in object){
-        console.log("${Key} : ${object[Key]}");
+        console.log(`${Key} : ${object[Key]}`);
     }
 }
 
