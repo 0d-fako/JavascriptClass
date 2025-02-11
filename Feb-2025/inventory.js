@@ -1,19 +1,17 @@
-
-function printEachFruitNameAndQuantity (Object){
+function printEachFruitNameAndQuantity(object) {
     let result = "";
-    for (Key, Value in ObjectEntries(Object)){
-        result += `${Key} : ${Value} `;
-    return result;
+    for (const [key, value] of Object.entries(object)) {
+        result += `${key}: ${value} `;
     }
+    return result;
 }
 
-function totalNumberOfFruits(Object){
+function totalNumberOfFruits(object) {
     let sum = 0;
-    for (Key, Value in ObjectEntries(Object)){
-        sum += Value;
+    for (const value of Object.values(object)) {
+        sum += value;
     }
     return sum;
 }
 
-
-module.exports = {printEachFruitNameAndQuantity, totalNumberOfFruits}
+module.exports = { printEachFruitNameAndQuantity, totalNumberOfFruits };
