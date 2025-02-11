@@ -1,21 +1,19 @@
-const inventory ={
-    apple : 10,
-    banana : 2,
-    orange : 8,
-    mango :10
 
-}
-
-
-function printEachFruitNameAndQuantity (inventory){
-    for (Key, Value in ObjectEntries(inventory)){
-        return `${Key} :${Value}`;
+function printEachFruitNameAndQuantity (Object){
+    let result = "";
+    for (Key, Value in ObjectEntries(Object)){
+        result += `${Key} : ${Value} `;
+    return result;
     }
 }
 
-
-function totalNumberOfFruits(inventory){
-    total = 0;
-    for (key, value in ObjectEntries(inventory))total += value;
-    return total
+function totalNumberOfFruits(Object){
+    let sum = 0;
+    for (Key, Value in ObjectEntries(Object)){
+        sum += Value;
+    }
+    return sum;
 }
+
+
+module.exports = {printEachFruitNameAndQuantity, totalNumberOfFruits}
