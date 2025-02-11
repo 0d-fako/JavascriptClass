@@ -26,3 +26,6 @@ function printEmployeeInfo(company){
     return employeeInfo;
 }
 
+
+module.exports = {printSecondEmployeeName, extractCompanyInfo, printEmployeeInfo};
+
