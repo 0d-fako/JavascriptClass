@@ -1,7 +1,7 @@
 const student = {
     name: 'John',
     age: 25,
-    hobbies: ['reading', 'coding', 'swimming'],
+    courses: ['Maths', 'Physics', 'Computer Science'],
     address: {
         street: '123 Main St',
         city: 'New York',
@@ -13,6 +13,10 @@ function printStudentName(student) {
     console.log(student.name);
 }
 
-function printStudentHobbies(student) {
-    console.log(student.hobbies);
+function printStudentSecondCourse(student) {
+    console.log(student.hobbies[1]);
+}
+
+function printStudentZip(student) {
+    console.log(student.address.zip);
 }
