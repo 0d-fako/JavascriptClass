@@ -15,3 +15,6 @@ const bankAccount ={
         return this.balance;
     }
 }
+
+
+module.exports = bankAccount;
