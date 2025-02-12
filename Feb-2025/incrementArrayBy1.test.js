@@ -8,7 +8,7 @@ test('Increment Array by 1', () => {
 })
 
 test('Increment Array by 1', () => {
-    let result = incrementArrayByOne([1,2,3,4,9]);
-    let answer = [1,2,3,5,0];
+    let result = incrementArrayByOne([1,2,9]);
+    let answer = [1,3,0];
     expect(result).toEqual(answer);
 })

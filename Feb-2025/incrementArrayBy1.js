@@ -22,7 +22,7 @@ function incrementArrayBy1(input){
 }
 
 
-console.log(incrementArrayBy1([9,9,9]));
+console.log(incrementArrayBy1([9,8,9]));
 
 
 
