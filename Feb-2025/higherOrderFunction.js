@@ -53,10 +53,9 @@ const shoppingList = [
 ]
 
 function getHealthyItems(shoppingList){
-    const healthyItems =[]
-    healthyItems.push(shoppingList.filter(item => item.isHealthy));
+    const healthyItems = shoppingList.filter(item => item.isHealthy);
     healthyItems.forEach(item => {
-        console.log(item)})
+        console.log(item.name)})
 }
 
 getHealthyItems(shoppingList);
