@@ -16,4 +16,16 @@ function getSquaredScores(scores) {
 
 
 
-module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores };
+
+function assignBooksToUsers(books, users) {
+    const library = {};
+    for(const [index, key] of users.entries()){
+        library[key] = books[index];
+    } 
+    return library;  
+}
+
+
+console.log(assignBooksToUsers(books, libraryUsers));
+
+module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers };
