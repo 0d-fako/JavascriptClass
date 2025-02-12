@@ -16,5 +16,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "package.json": "file:"
   }
 }

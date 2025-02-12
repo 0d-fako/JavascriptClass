@@ -1,4 +1,4 @@
-const {incrementArrayBy1, incrementArrayByOne } = require('./incrementArrayBy1.js');
+const {incrementArrayBy1, incrementArrayByOne,addIndexToEachElement } = require('./incrementArrayBy1.js');
 
 
 test('Increment Array by 1', () => {
@@ -10,5 +10,11 @@ test('Increment Array by 1', () => {
 test('Increment Array by 1', () => {
     let result = incrementArrayByOne([1,2,9]);
     let answer = [1,3,0];
+    expect(result).toEqual(answer);
+})
+
+test('Add index to each element', () => { 
+    let result = addIndexToEachElement([1,2,3,4,5]);
+    let answer = [1,3,5,7,9];
     expect(result).toEqual(answer);
 })

@@ -34,6 +34,13 @@ function incrementArrayByOne(input){
 }
 
 
+function addIndexToEachElement(input){
+    return input.map((element, index) => element + index);
+}
 
 
-module.exports = { incrementArrayBy1, incrementArrayByOne };
+function getOddNumbers(input){
+    return input.filter(element => element % 2 !== 0);
+}
+
+module.exports = { incrementArrayBy1, incrementArrayByOne, addIndexToEachElement };
