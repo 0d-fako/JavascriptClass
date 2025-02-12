@@ -16,7 +16,6 @@ function getSquaredScores(scores) {
 
 
 
-
 function assignBooksToUsers(books, users) {
     const library = {};
     for(const [index, key] of users.entries()){
