@@ -43,7 +43,22 @@ function getShoppingListTotal(list){
 }
 
 
+const shoppingList = [
+    {name : "Apple", category : "Fruits", isHealthy : true},
+    {name : "Candy", category : "Sweets", isHealthy : false},
+    {name : "Carrot", category : "Vegetables", isHealthy : true},
+    {name : "Chocolate", category : "Sweets", isHealthy : false},
+    {name : "Cucumber", category : "Vegetables", isHealthy : true},
 
+]
 
+function getHealthyItems(shoppingList){
+    const healthyItems =[]
+    healthyItems.push(shoppingList.filter(item => item.isHealthy));
+    healthyItems.forEach(item => {
+        console.log(item)})
+}
+
+getHealthyItems(shoppingList);
 
 module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers, getTimeHigherThanNoon, getShoppingListTotal};
