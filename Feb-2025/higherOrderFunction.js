@@ -32,5 +32,18 @@ function getTimeHigherThanNoon(lectureTime){
 }
 
 
+function getShoppingListTotal(list){
+    let total = 0;
+    for (const key in list) {
+        if (list.hasOwnProperty(key)) {
+          total += list[key];
+        }
+    }
+    return total
+}
 
-module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers, getTimeHigherThanNoon };
+
+
+
+
+module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers, getTimeHigherThanNoon, getShoppingListTotal};
