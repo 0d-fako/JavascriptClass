@@ -25,7 +25,12 @@ function assignBooksToUsers(books, users) {
     return library;  
 }
 
+const lectureTime = ["11:00AM", "12:00PM", "1:00PM", "2:00PM", "8:00PM"];
 
-console.log(assignBooksToUsers(books, libraryUsers));
+function getTimeHigherThanNoon(lectureTime){
+    return lectureTime.filter(time => time.includes("PM"));
+}
 
-module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers };
+
+
+module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers, getTimeHigherThanNoon };
