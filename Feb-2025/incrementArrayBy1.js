@@ -43,4 +43,13 @@ function getOddNumbers(input){
     return input.filter(element => element % 2 !== 0);
 }
 
-module.exports = { incrementArrayBy1, incrementArrayByOne, addIndexToEachElement, getOddNumbers };
+
+const getWordsGreaterThan4 = (input) => {
+    return input.filter(word => word.length > 4);
+}
+
+const getAgeGreaterThan20 = (input) => {
+    return input.filter(person => person.age > 20);
+}
+
+module.exports = { incrementArrayBy1, incrementArrayByOne, addIndexToEachElement, getOddNumbers, getWordsGreaterThan4, getAgeGreaterThan20};
