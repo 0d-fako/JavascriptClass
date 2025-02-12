@@ -26,8 +26,14 @@ function assignBooksToUsers(books, users) {
 
 const lectureTime = ["11:00AM", "12:00PM", "1:00PM", "2:00PM", "8:00PM"];
 
-function getTimeHigherThanNoon(lectureTime){
-    return lectureTime.filter(time => time.includes("PM"));
+    
+function getAfternoonTime(lectureTime) {
+    return lectureTime.filter(time => {
+        const hour = parseInt(time.split(":")[0]);
+        const isPM = time.includes("PM");
+        return isPM && hour >= 12 && hour <= 5;
+    
+    })
 }
 
 
@@ -59,4 +65,4 @@ function getHealthyItems(shoppingList){
 
 getHealthyItems(shoppingList);
 
-module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers, getTimeHigherThanNoon, getShoppingListTotal};
+module.exports = { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers, getAfternoonTime, getShoppingListTotal};

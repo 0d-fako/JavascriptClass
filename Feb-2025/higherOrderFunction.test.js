@@ -1,4 +1,4 @@
-const { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers,getTimeHigherThanNoon, getShoppingListTotal } = require('./higherOrderFunction.js');
+const { findScoreGreaterThan70, increaseScoreBy5, getSquaredScores, assignBooksToUsers,getAfternoonTime, getShoppingListTotal } = require('./higherOrderFunction.js');
 
 test('Find score greater than 70', () => {
     let result = findScoreGreaterThan70([90, 85, 78, 99, 100, 88, 78, 95, 89, 90]);
@@ -28,10 +28,10 @@ test('Assign books to users', () => {
 })
 
 
-test('Get time higher than noon', () => {
+test('Get afternoon time', () => {
     const lectureTime = ["11:00AM", "12:00PM", "1:00PM", "2:00PM", "8:00PM"];
-    let result = getTimeHigherThanNoon(lectureTime);
-    let answer = ["12:00PM", "1:00PM", "2:00PM", "8:00PM"];
+    let result = getAfternoonTime(lectureTime);
+    let answer = ["12:00PM", "1:00PM", "2:00PM"];
     expect(result).toEqual(answer);
 })
 
