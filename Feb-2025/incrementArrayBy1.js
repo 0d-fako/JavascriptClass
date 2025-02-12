@@ -43,4 +43,4 @@ function getOddNumbers(input){
     return input.filter(element => element % 2 !== 0);
 }
 
-module.exports = { incrementArrayBy1, incrementArrayByOne, addIndexToEachElement };
+module.exports = { incrementArrayBy1, incrementArrayByOne, addIndexToEachElement, getOddNumbers };
