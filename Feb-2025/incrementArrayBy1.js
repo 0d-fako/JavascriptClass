@@ -25,4 +25,15 @@ function incrementArrayBy1(input){
 console.log(incrementArrayBy1([9,9,9]));
 
 
-module.exports = { incrementArrayBy1 };
+
+function incrementArrayByOne(input){
+    let arrayString = parseInt(input.join(""));
+    let incremented = arrayString + 1;
+    let incrementedArray = incremented.toString().split("");
+    return incrementedArray.map(Number);
+}
+
+
+
+
+module.exports = { incrementArrayBy1, incrementArrayByOne };
