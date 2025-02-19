@@ -28,7 +28,7 @@ test('Assign books to users', () => {
 })
 
 
-test('Get afternoon time', () => {
+test('Get afternoon time8888888888', () => {
     const lectureTime = ["11:00AM", "12:00PM", "1:00PM", "2:00PM", "8:00PM"];
     let result = getAfternoonTime(lectureTime);
     let answer = ["12:00PM", "1:00PM", "2:00PM"];
