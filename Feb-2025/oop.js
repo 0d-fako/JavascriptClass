@@ -25,3 +25,11 @@ Object.setPrototypeOf(cat, animal);
 console.log(cat.move());
 
 cat.name = "pussyCat";
+
+
+function Animal(name, age, complexion){
+    this.name = name;
+    this.age = age;
+    this.complexion = complexion;
+}
+
