@@ -12,3 +12,14 @@ test('Get highest common factor', () => {
     expect(result).toEqual(answer);
 })  
 
+test('Get prime common factors', () => {
+    let result = primeCommonFactors([4,12,8]);
+    let answer = [2,2];
+    expect(result).toEqual(answer);
+})
+
+test('Get prime common factors', () => {
+    let result = primeCommonFactors([6,9,15]);
+    let answer = [3];
+    expect(result).toEqual(answer);
+})
