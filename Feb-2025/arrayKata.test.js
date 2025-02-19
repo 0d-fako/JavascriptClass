@@ -1,4 +1,4 @@
-const getHighestCommonFactor = require('./ArrayKata.js');
+const [getHighestCommonFactor, primeCommonFactors] = require('./ArrayKata.js');
 
 test('Get highest common factor', () => {
     let result = getHighestCommonFactor([4,12,8]);
@@ -11,3 +11,4 @@ test('Get highest common factor', () => {
     let answer = [3];
     expect(result).toEqual(answer);
 })  
+

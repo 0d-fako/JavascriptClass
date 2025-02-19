@@ -1,8 +1,4 @@
-input = [4,12,8]
-output = [2,2]
 
-input = [6,9,5]
-output = [3]
 
 function factorize(num) {
     let factors = [];
@@ -30,8 +26,32 @@ function getHighestCommonFactor(input){
 }
 
 
+function primeCommonFactors(array) {
+    let result = [];
+    let isDivisible;
+    let divisor = 2;
+
+    while (divisor <= Math.min(...array)) {
+        isDivisible = array.every(element => element % divisor === 0);
+
+        if (isDivisible) {
+            result.push(divisor);
+            array = array.map(element => element / divisor);
+        } else {
+            divisor++;
+        }
+    }
+
+    return result;
+}
+
+
+
 
 console.log(getHighestCommonFactor([4,12,8])) 
 console.log(getHighestCommonFactor([6,9,15])) 
 
-module.exports = getHighestCommonFactor;
+
+console.log(primeCommonFactors([4,12,8])) 
+console.log(primeCommonFactors([6,9,15]))
+module.exports = [getHighestCommonFactor, primeCommonFactors];
