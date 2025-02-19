@@ -17,7 +17,14 @@ class Student extends Human{
     get grade(){
         return this.#grade;
     }
+
+
+    speak(){
+        return `${this.name} is speaking Chinese`;  
+    }  
 }
 
 let student = new Student("John", 25, "A");
 console.log(student.grade);
+console.log(student.name, student.age);
+console.log(student.speak());
