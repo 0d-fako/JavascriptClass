@@ -8,4 +8,16 @@ class Student extends Human{
         super(name, age);
         this.#grade = grade;
     }
+
+
+    set grade(grade){
+        this.#grade = grade;
+    }
+
+    get grade(){
+        return this.#grade;
+    }
 }
+
+let student = new Student("John", 25, "A");
+console.log(student.grade);
