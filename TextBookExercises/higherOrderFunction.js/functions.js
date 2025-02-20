@@ -29,3 +29,39 @@ function stringWithLongestLength(array){
 
 
 console.log(stringWithLongestLength(["apple", "banana", "orange", "kiwi"]))
+
+
+// let total = 0, count = 0;
+// for (let script of SCRIPTS){
+//      if(script.living){
+//         total += script.year;
+//         count++;
+//      }
+// }
+
+// console.log(Math.round(total/count))
+
+
+
+function stringContainsOnlyBinary(string){
+    for(let char of string){
+        if(char !== "0" && char !== "1"){
+            return false;
+        }
+    }
+    return true;
+}
+
+function convertStringToNumbersArray(string){
+    if (!stringContainsOnlyBinary(string)){
+        return "Invalid input"; 
+    
+    }
+    return string.split("").map(char => parseInt(char));
+}
+
+console.log(stringContainsOnlyBinary("1110101"))
+console.log(stringContainsOnlyBinary("11101012"))
+
+console.log(convertStringToNumbersArray("1110101"))
+console.log(convertStringToNumbersArray("11101012"))
