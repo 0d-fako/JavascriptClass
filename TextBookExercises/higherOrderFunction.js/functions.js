@@ -65,3 +65,22 @@ console.log(stringContainsOnlyBinary("11101012"))
 
 console.log(convertStringToNumbersArray("1110101"))
 console.log(convertStringToNumbersArray("11101012"))
+
+
+function flattenArrays(array){
+    return array.reduce((total, current) => total.concat(current), []);
+}
+
+console.log(flattenArrays([[1,2,3], [4,5,6], [7,8,9]]))
+
+function getUniqueValues(array){
+    return [...new Set(array)];
+}
+
+console.log(getUniqueValues([1,2,3,4,5,5,6,7,8,9,9,10]))
+
+function myOwnLoop(value, test, update, body){
+    for(let i = value; test(i); i = update(i)){
+        body(i);
+    }
+}
