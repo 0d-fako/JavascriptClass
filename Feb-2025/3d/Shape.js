@@ -16,40 +16,24 @@ class Shape{
 
 
 class Rectangle extends Shape{
-    #length;
-    #width;
+    side1;
+    side2;
 
-    constructor(name,length, width){
+    constructor(name,side1, side2){
         super(name);
-        this.length = length;
-        this.width = width;
-    }
-
-    set length(length){
-        this.#length = length;
-    }
-
-    get length(){
-        return this.#length;
-    }
-
-    set width(width){
-        this.#width = width;
-    }
-
-    get width(){
-        return this.#width;
+        this.side1 = side1;
+        this.side2 = side2;
     }
 
     area(){
-        return this.length * this.width;
+        return this.side1 * this.side2;
     }
 
     perimeter(){
-        return 2 * (this.length + this.width);
+        return 2 * (this.side1 + this.side2);
     }
 
     isSquare(){
-        return this.length === this.width;
+        return this.side1 === this.side2;
     }
 }
