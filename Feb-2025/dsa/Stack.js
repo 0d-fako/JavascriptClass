@@ -4,12 +4,14 @@ class Stack {
   }
 
   push(element) {
-    this.items.push(element);
+    this.items[this.items.length] = element;
   }
 
   pop() {
     if (this.items.length === 0) return "Stack is empty";
-    return this.items.pop();
+    let element = this.items[this.items.length - 1]
+    this.items.length = this.items.length - 1;
+    return element; 
   }
 
   peek() {
@@ -23,6 +25,12 @@ class Stack {
   contain(element) {
     return this.items.includes(element);
   }
+
+  size(){
+    return this.items.length;
+  }
+
+
 
   printStack() {
     let str = "";

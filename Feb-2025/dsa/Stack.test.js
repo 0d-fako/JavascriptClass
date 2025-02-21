@@ -8,4 +8,8 @@ test("Test Stack class", () => {
 
     expect(stack.peek()).toBe(3);
     expect(stack.pop()).toBe(3);
+    //expect(stack.peek()).toBe(2);
+    expect(stack.isEmpty()).toBe(false);
 });
+
+
