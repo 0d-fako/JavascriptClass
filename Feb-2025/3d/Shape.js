@@ -37,3 +37,5 @@ class Rectangle extends Shape{
         return this.side1 === this.side2;
     }
 }
+
+module.exports = {Shape, Rectangle};
