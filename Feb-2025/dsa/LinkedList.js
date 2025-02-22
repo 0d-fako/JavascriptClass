@@ -24,4 +24,16 @@ class LinkedList{
             current.next = node;
         }
     }
-}
+
+
+    toArray(){
+        const items = [];
+
+        let current = this.head;
+        while(current){
+            items.push(current.data);
+            current = current.next;
+        }
+        return items;
+    }
+} 
