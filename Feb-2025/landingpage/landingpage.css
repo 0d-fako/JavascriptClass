@@ -2,7 +2,6 @@
     --primary-blue: #2196F3;
     --text-dark: #333333;
     --background-light: #FFFFFF;
-    
 }
 
 * {
@@ -40,15 +39,24 @@ body {
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
 }
 
 .auth .sign-up {
     text-decoration: none;
     color: var(--text-dark);
-    border-color: #333333;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid var(--text-dark);
     padding: 0.4rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth .sign-up:hover {
+    background-color: var(--text-dark);
+    color: white;
 }
 
 .hero {
@@ -100,6 +108,11 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.get-started:hover {
+    background-color: #1976D2;
 }
 
 .watch-story {
@@ -145,7 +158,6 @@ body {
     line-height: 1.6;
     max-width: 800px;
 }
-
 
 .services-container {
     max-width: 1200px;
@@ -228,13 +240,10 @@ body {
     }
 }
 
-
-
 .consultation-form {
-    max-width: 800px;
-    margin: 0px 50px;
-    border-radius: 8px;
-    padding: 0 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .banner {
@@ -245,10 +254,8 @@ body {
     justify-content: space-between;
     color: white;
     margin-bottom: 30px;
-    margin: 0px 100px;
     border-radius: 8px;
 }
-
 
 .banner-content {
     flex: 1;
@@ -268,6 +275,12 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.get-in-touch:hover {
+    background-color: #f0f0f0;
+    color: #2196F3;
 }
 
 .form-container {
@@ -275,11 +288,8 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--primary-blue);
-    margin: 100px 100px;
-
+    border: 1px solid var(--primary-blue);
+    margin: 2rem auto;
 }
 
 .form-title {
@@ -333,6 +343,7 @@ select {
     font-size: 16px;
     margin: 0 auto;
     display: block;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .submit-btn:hover {
@@ -345,6 +356,7 @@ select {
     padding: 40px 20px;
     background-color: white;
     border-top: 1px solid #e0e0e0;
+    margin-top: 4rem;
 }
 
 .footer-container {
@@ -405,10 +417,12 @@ select {
     color: #666;
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
     color: #2196F3;
+    text-decoration: underline;
 }
 
 .footer-bottom {
