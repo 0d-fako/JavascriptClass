@@ -41,10 +41,10 @@ body {
     color: var(--text-dark);
 }
 
-.auth .sign-up {
+/* .auth sign-up {
     text-decoration: none;
     color: var(--text-dark);
-}
+} */
 
 .hero {
     display: flex;
