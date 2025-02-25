@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, sans-serif;
+    
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background-color: white;
@@ -344,11 +345,20 @@ body {
     color: white;
     margin-bottom: 30px;
     border-radius: 8px;
+    position : relative;
+
 }
+
+.banner-img{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 
 .banner-content {
     flex: 1;
-    padding-left: 20px;
+    padding-left: 100px;
 }
 
 .banner h1 {
