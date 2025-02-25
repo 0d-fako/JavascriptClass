@@ -11,6 +11,16 @@ console.log(classTitle);
 const classTitles = Array.from(classTitle);
 
 classTitles.forEach(title => {
-    title.textContent = 'delete'
-    console.log(title.textContent);
+    title.textContent += ' (delete)'
+    let parent = title.parentElement;
 });
+
+const books = document.querySelector('#book-list ul');
+
+books.addEventListener("click", (event)=>{
+    console.log(event);
+    });
+
+const listItems = document.getElementsByTagName('li');
+
+
