@@ -11,5 +11,6 @@ console.log(classTitle);
 const classTitles = Array.from(classTitle);
 
 classTitles.forEach(title => {
-    console.log(title);
+    title.textContent = 'delete'
+    console.log(title.textContent);
 });
