@@ -18,9 +18,15 @@ classTitles.forEach(title => {
 const books = document.querySelector('#book-list ul');
 
 books.addEventListener("click", (event)=>{
-    console.log(event);
-    });
+    if (event.target.className = "delete"){
+        const liTag = event.target.parentElement;
+        books.removeChild(liTag);
+    };
+})
+const input = document.getElementById("add-book")
 
-const listItems = document.getElementsByTagName('li');
+input.addEventListener("submit", (event) =>{
+    if(event.target.)
+});
 
 
