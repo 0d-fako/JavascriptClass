@@ -27,4 +27,6 @@ const roads = [
         return graph;
     }
 
-    const roadGraph =
+    const roadGraph = buildGraph(roads)
+
+    console.log(roadGraph)
