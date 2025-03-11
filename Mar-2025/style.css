@@ -17,7 +17,7 @@
     padding: 0 20px;
   }
   
-  /* Header & Navigation */
+
   header {
     padding: 20px 0;
     position: relative;
@@ -34,53 +34,7 @@
     display: flex;
     align-items: center;
   }
-  
-  .logo-circle {
-    width: 70px;
-    height: 70px;
-    background-color: #333;
-    border-radius: 50%;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo-letter {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
-  .letter-g {
-    background-color: #6e6e6e;
-    top: 10px;
-    left: 15px;
-    color: white;
-  }
-  
-  .letter-a {
-    background-color: #3e7bfa;
-    top: 10px;
-    right: 15px;
-    color: white;
-  }
-  
-  .letter-s {
-    background-color: #ff5bb0;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-  }
-  
+
   .logo-text {
     font-size: 24px;
     font-weight: bold;
