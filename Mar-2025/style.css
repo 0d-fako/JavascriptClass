@@ -92,7 +92,7 @@
     background-color: #37967c;
   }
   
-  /* Hero Section */
+ 
   .hero {
     padding: 40px 0 100px;
     position: relative;
@@ -303,31 +303,6 @@
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 3;
-  }
-  
-  .badge-s {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: #ff5bb0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    z-index: 4;
-  }
-  
-  .badge-s.one {
-    bottom: 70px;
-    right: 120px;
-  }
-  
-  .badge-s.two {
-    bottom: 30px;
-    right: 70px;
   }
   
  
