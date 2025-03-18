@@ -1,4 +1,4 @@
-import express from 'express';
+import express from 'express'
 
 
 
@@ -7,5 +7,7 @@ const port = 5000
 
 
 app.listen(port, () => {
-    console.log("running on http://localhost:" + port)
+    console.log("running on http://localhost:" + port
+
+    )
 })
