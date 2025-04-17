@@ -31,11 +31,15 @@ getProducts(PRODUCT_URL);
 
 function displayProducts(products){
     products.forEach((product) => {
+        
+        // productsContainer.innerHTML = '';
+        
         const {title, price, description, image} = product;
         console.log(title, price, description, image);
 
         const productElement = document.createElement('div');
         productElement.classList.add('product');
+        
         
         
         const nairaPrice = price * 1500;
