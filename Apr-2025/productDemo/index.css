@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+}
+
+.bodyWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav {
+    background: #c799f0;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.navItems {
+    display: flex;
+    align-items: center;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+}
+
+.navItem {
+    margin: 0 15px;
+}
+
+.navItem a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navItem a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+
+#search-books {
+    display: flex;
+    align-items: center;
+}
+
+#search-books input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 200px;
+}
+
+#search-books button {
+    padding: 8px 16px;
+    background: #9b59f6;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#search-books button:hover {
+    background: #8241d8;
+}
+
+
+.products {
+    padding: 40px 0;
+}
+
+.productsWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.product {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #f0f0f0; 
+}
+
+.productName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 15px 5px;
+    color: #333;
+}
+
+.productDescription {
+    padding: 0 15px 10px;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.productPrice {
+    padding: 0 15px 15px;
+    font-weight: 700;
+    color: #9b59f6;
+    font-size: 1.1rem;
+}
+
+.addToCartButton {
+    display: block;
+    width: 90%;
+    margin: 0 auto 15px;
+    padding: 10px;
+    background: #9b59f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.addToCartButton:hover {
+    background: #8241d8;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navWrapper {
+        flex-direction: column;
+    }
+    
+    .navItems {
+        margin: 15px 0;
+    }
+    
+    .navList {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navItem {
+        margin: 5px 10px;
+    }
+    
+    #search-books {
+        margin-top: 15px;
+    }
+    
+    .productsWrapper {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .productsWrapper {
+        grid-template-columns: 1fr;
+    }
+}

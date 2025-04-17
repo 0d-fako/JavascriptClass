@@ -1,5 +1,8 @@
 const PRODUCT_URL = "https://fakestoreapi.com/products";
 
+const productsContainer = document.querySelector(".products");
+
+console.log(productsContainer);
 
 const getProducts = (url)=>{
     fetch(url)
@@ -13,6 +16,6 @@ const getProducts = (url)=>{
 getProducts(PRODUCT_URL);
 
 
-function displayProducts(){
-    
+function displayProducts(products){
+
 }
