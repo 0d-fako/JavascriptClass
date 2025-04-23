@@ -1,4 +1,4 @@
-// import React from 'react'
+import React, { useState } from 'react'
 import style from './bookList.module.css'
 
 
@@ -12,9 +12,9 @@ const BookList = () => {
         "The Wise Man's Fear",
         "Kafka on the Shore",
         "The Master and the Margarita"
-    ]
+    ];
 
-
+    const[] = useState(bookList)
 
     return (
         <div id="wrapper">
@@ -34,7 +34,7 @@ const BookList = () => {
 	    			<span className={style["name"]}></span>
 	    			<span className={style['delete']}>delete</span>
 	    		</li>
-	    		<li>
+	    		{/* <li>
 	    			<span className={style["name"]}></span>
 	    			<span className={style['delete']}>delete</span>
 	    		</li>
@@ -45,7 +45,7 @@ const BookList = () => {
 	    		<li>
 	    			<span className={style["name"]}></span>
 	    			<span className={style['delete']}>delete</span>
-	    		</li>
+	    		</li> */}
 	    	</ul>
 	    </div>
 	    <form id={style["add-book"]}>
