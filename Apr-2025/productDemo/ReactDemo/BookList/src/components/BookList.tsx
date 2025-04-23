@@ -1,7 +1,21 @@
 // import React from 'react'
 import style from './bookList.module.css'
 
+
+
+
+
 const BookList = () => {
+
+    const bookList = [
+        "Name of the Wind",
+        "The Wise Man's Fear",
+        "Kafka on the Shore",
+        "The Master and the Margarita"
+    ]
+
+
+
     return (
         <div id="wrapper">
 	    <header>
@@ -17,19 +31,19 @@ const BookList = () => {
 	    	<h2 className={style["title"]}>Books to Read</h2>
 	    	<ul>
 	    		<li>
-	    			<span className={style["name"]}>Name of the Wind</span>
+	    			<span className={style["name"]}></span>
 	    			<span className={style['delete']}>delete</span>
 	    		</li>
 	    		<li>
-	    			<span className={style["name"]}>The Wise Man's Fear</span>
+	    			<span className={style["name"]}></span>
 	    			<span className={style['delete']}>delete</span>
 	    		</li>
 	    		<li>
-	    			<span className={style["name"]}>Kafka on the Shore</span>
+	    			<span className={style["name"]}></span>
 	    			<span className={style['delete']}>delete</span>
 	    		</li>
 	    		<li>
-	    			<span className={style["name"]}>The Master and the Margarita</span>
+	    			<span className={style["name"]}></span>
 	    			<span className={style['delete']}>delete</span>
 	    		</li>
 	    	</ul>
