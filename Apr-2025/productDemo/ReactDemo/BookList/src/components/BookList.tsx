@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import style from './bookList.module.css'
 
 
@@ -14,7 +14,13 @@ const BookList = () => {
         "The Master and the Margarita"
     ];
 
-    const[] = useState(bookList)
+    const deleteHandler =(item:string)=> {
+        bookList.filter((book) => book !== item);
+        
+
+    }
+
+    // const[] = useState(bookList)
 
     return (
         <div id="wrapper">
@@ -32,9 +38,9 @@ const BookList = () => {
 	    	<ul>
                 {
                     bookList.map((book, index) => (
-                        <li>
+                        <li key = {index}>
                             <span className= {style['name']}> {book}</span>
-                         <span className= {style['delete']}>delete</span>
+                         <span className= {style['delete']} onClick={()=> deleteHandler(book)}>delete</span>
                         </li>
                     ))
                 }
