@@ -30,22 +30,15 @@ const BookList = () => {
 	    <div id={style['book-list']}>
 	    	<h2 className={style["title"]}>Books to Read</h2>
 	    	<ul>
-	    		<li>
-	    			<span className={style["name"]}></span>
-	    			<span className={style['delete']}>delete</span>
-	    		</li>
-	    		{/* <li>
-	    			<span className={style["name"]}></span>
-	    			<span className={style['delete']}>delete</span>
-	    		</li>
-	    		<li>
-	    			<span className={style["name"]}></span>
-	    			<span className={style['delete']}>delete</span>
-	    		</li>
-	    		<li>
-	    			<span className={style["name"]}></span>
-	    			<span className={style['delete']}>delete</span>
-	    		</li> */}
+                {
+                    bookList.map((book, index) => (
+                        <li>
+                            <span className= {style['name']}> {book}</span>
+                         <span className= {style['delete']}>delete</span>
+                        </li>
+                    ))
+                }
+
 	    	</ul>
 	    </div>
 	    <form id={style["add-book"]}>
