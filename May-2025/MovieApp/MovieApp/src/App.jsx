@@ -1,11 +1,11 @@
-
+import SignUp from './component/auth/signUp/signUp'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <h1>It is working</h1>
+      <SignUp />
         
     </>
   )

@@ -1,4 +1,7 @@
 import React from "react";
+import style from "./login.module.css";
+import CustomButton from "../../../reuseable/CustomButton";
+
 
 
 const Login = () => {
@@ -7,14 +10,14 @@ const Login = () => {
         <h2>Login</h2>
         <form>
             <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" required />
             </div>
             <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password" required />
+                <label htmlFor="password">Password</label>
+                <input type="password" id="password" name="password" required />
             </div>
-            <button type="submit">Login</button>
+            <CustomButton text="Sign Up" type="submit" className="sign-up-button" />
         </form>
         </div>
     );
