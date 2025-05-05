@@ -1,13 +1,13 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, incrementByAmount } from "./counterSlice";
+import { increment, decrement} from "./counterSlice";
 
 const Counter =() => {
 
     const count = useSelector((state) => state.counter.value);
-    localStorage.setItem('count', count);
-    const incrementValue = localStorage.getItem('count');
+    // localStorage.setItem('count', count);
+    // /* const incrementValue = localStorage.getItem('count');*/
     const dispatch = useDispatch();
 
     return (
@@ -17,7 +17,7 @@ const Counter =() => {
             <div>
                 <button onClick = {() => dispatch (increment())}>Increment</button>
                 <button onClick = {() => dispatch (decrement())}>Decrement</button>
-                <button>IncrementByAmount</button>
+                {/* <button>IncrementByAmount</button> */}
             </div>
 
         </div>
