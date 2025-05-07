@@ -24,7 +24,7 @@ const SignUp = () => {
             [name]: value.trim(),
         }));
         
-        // Check if passwords match when confirmPassword is changed
+
         if (name === "confirmPassword" || name === "password") {
             const otherField = name === "password" ? "confirmPassword" : "password";
             setPasswordsMatch(value === userData[otherField] || !userData[otherField]);
@@ -34,34 +34,34 @@ const SignUp = () => {
     const submitHandler = async (event) => {
         event.preventDefault();
         
-        // Validate passwords match
+        
         if (userData.password !== userData.confirmPassword) {
             setPasswordsMatch(false);
             return;
         }
         
-        // Create the payload object in the format expected by your backend
+
         const payload = {
             username: userData.username,
             email: userData.email,
             password: userData.password,
             role: userData.role,
-            profile_picture: null // Optional field, set to null
+            profile_picture: null 
         };
         
         try {
             const response = await signUp(payload).unwrap();
             console.log("Signup successful:", response);
-            // Handle successful signup (redirect, show message, etc.)
+            
         } catch (err) {
             console.error("Error signing up:", err);
-            // Handle error (show error message to user)
+            
         }
     };
 
     return (
         <div className={style.signUp}>
-            <h2>SignUp</h2>
+            <h2>Bidvado Auction SignUp</h2>
             <form onSubmit={submitHandler}>
                 <div className={style.formGroup}>
                     <label htmlFor="username">Username</label>
