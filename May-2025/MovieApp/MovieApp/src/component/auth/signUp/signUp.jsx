@@ -2,6 +2,7 @@ import React from "react";
 import style from "./signUp.module.css";
 import CustomButton from "../../../reuseable/CustomButton";
 import { useState } from "react";
+import { useSignupMutation } from "../../../service/userAuthApi";
 
 
 
@@ -18,6 +19,8 @@ const SignUp = () => {
 
     const [userData, setUserData] = useState(userDetails);
 
+    const res = useSignupMutation();
+    console.log(res);
 
     const handleInput = (event) => {
         const { name, value } = event.target;
@@ -37,21 +40,21 @@ const SignUp = () => {
         <form>
 
             <div className={style.formGroup}>
-                <label htmlFor="fullName">Full Name : </label>
+                <label htmlFor="fullName">Full Name </label>
                 <input type="fullName" id="fullName" name="fullName" onChange ={handleInput} required />
             </div>
 
             <div className={style.formGroup}>
-                <label htmlFor="email">Email : </label>
+                <label htmlFor="email">Email </label>
                 <input type="email" id="email" name="email" onChange ={handleInput} required />
             </div>
 
             <div className={style.formGroup}>
-                <label htmlFor="password">Password : </label>
+                <label htmlFor="password">Password </label>
                 <input type="password" id="password" name="password" onChange ={handleInput} required />
             </div>
             <div className={style.formGroup}>
-                <label htmlFor="confirmPassword">Confirm Password : </label>
+                <label htmlFor="confirmPassword">Confirm Password </label>
                 <input type="password" id="confirmPassword" name="confirmPassword" onChange ={handleInput} required />
             </div>
 
