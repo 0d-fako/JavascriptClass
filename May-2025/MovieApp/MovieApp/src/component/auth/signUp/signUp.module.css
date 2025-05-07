@@ -75,20 +75,19 @@ body {
     outline: none;
 }
 
-/* For the select dropdown */
 .formGroup select {
     background-color: white;
     cursor: pointer;
 }
 
-/* Error message styles */
+
 .errorMessage {
     color: #e74c3c;
     font-size: 14px;
     margin-top: 5px;
 }
 
-/* Button styling - update the CustomButton component or apply these where needed */
+
 :global(.sign-up-button) {
     width: 100%;
     padding: 12px;
@@ -112,7 +111,7 @@ body {
     cursor: not-allowed;
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 500px) {
     .signUp {
         padding: 20px;
