@@ -25,11 +25,11 @@ const Login = () => {
         <div className={style.login}>
         <h2>Login</h2>
         <form>
-            <div className="form-group">
+            <div className={style.formGroup}>
                 <label htmlFor="email">Email</label>
                 <input type="email" id="email" name="email" onChange={handleChange} required />
             </div>
-            <div className="form-group">
+            <div className={style.formGroup}>
                 <label htmlFor="password">Password</label>
                 <input type="password" id="password" name="password" onChange={handleChange} required />
             </div>

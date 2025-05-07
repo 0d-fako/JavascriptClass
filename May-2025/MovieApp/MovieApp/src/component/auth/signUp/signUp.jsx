@@ -36,22 +36,22 @@ const SignUp = () => {
         <h2>SignUp</h2>
         <form>
 
-            <div className="form-group">
-                <label htmlFor="fullName">Email</label>
+            <div className={style.formGroup}>
+                <label htmlFor="fullName">Full Name : </label>
                 <input type="fullName" id="fullName" name="fullName" onChange ={handleInput} required />
             </div>
 
-            <div className="form-group">
-                <label htmlFor="email">Email</label>
+            <div className={style.formGroup}>
+                <label htmlFor="email">Email : </label>
                 <input type="email" id="email" name="email" onChange ={handleInput} required />
             </div>
 
-            <div className="form-group">
-                <label htmlFor="password">Password</label>
+            <div className={style.formGroup}>
+                <label htmlFor="password">Password : </label>
                 <input type="password" id="password" name="password" onChange ={handleInput} required />
             </div>
-            <div className="form-group">
-                <label htmlFor="confirmPassword">Confirm Password</label>
+            <div className={style.formGroup}>
+                <label htmlFor="confirmPassword">Confirm Password : </label>
                 <input type="password" id="confirmPassword" name="confirmPassword" onChange ={handleInput} required />
             </div>
 
