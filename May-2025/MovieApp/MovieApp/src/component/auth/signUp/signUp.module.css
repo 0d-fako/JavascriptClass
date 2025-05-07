@@ -1,3 +1,4 @@
+/* signUp.module.css */
 * {
     margin: 0;
     padding: 0;
@@ -15,39 +16,106 @@ body {
     width: 100%;
 }
 
-
-.signUp{
+.signUp {
     width: 100%;
-    max-width: 400px;
-    padding: 20px;
+    max-width: 450px;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .signUp h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #333;
-    text-decoration: rgb(10, 59, 49);
+    font-size: 26px;
+    font-weight: 600;
+    position: relative;
 }
 
+.signUp h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #0a3b31;
+    border-radius: 2px;
+}
 
 .formGroup {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
-
 
 .formGroup label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+    font-size: 15px;
 }
 
-.formGroup input {
+.formGroup input,
+.formGroup select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+    border-color: #0a3b31;
+    box-shadow: 0 0 0 3px rgba(10, 59, 49, 0.1);
+    outline: none;
+}
+
+/* For the select dropdown */
+.formGroup select {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Error message styles */
+.errorMessage {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Button styling - update the CustomButton component or apply these where needed */
+:global(.sign-up-button) {
+    width: 100%;
+    padding: 12px;
+    background-color: #0a3b31;
+    color: white;
+    border: none;
+    border-radius: 6px;
     font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+:global(.sign-up-button:hover) {
+    background-color: #0c4c3e;
+}
+
+:global(.sign-up-button:disabled) {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 500px) {
+    .signUp {
+        padding: 20px;
+        max-width: 90%;
+    }
 }
