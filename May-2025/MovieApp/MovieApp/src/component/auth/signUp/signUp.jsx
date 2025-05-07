@@ -1,73 +1,64 @@
-import React from 'react';
+import React from "react";
 import style from "./signUp.module.css";
-
 import CustomButton from "../../../reuseable/CustomButton";
+import { useState } from "react";
+
+
 
 
 const SignUp = () => {
 
+
     const userDetails = {
-        firtName : "",
-        lastName : "",
+        fullName: "",
         email: "",
         password: "",
         confirmPassword: "",
     };
 
-    const handleInput = (e) => {
-        const {} = e.target;
-    }
-
     const [userData, setUserData] = useState(userDetails);
 
+
+    const handleInput = (event) => {
+        const { name, value } = event.target;
+        setUserData((prev) => ({
+            ...prev,
+            [name]: value.trim(),
+        }));
+    }
+
+
+    console.log(userData);
+
+
     return (
-        <div className="sign-up">
-        <h2>Sign Up</h2>                
+        <div className={style.signUp}>
+        <h2>SignUp</h2>
         <form>
+
             <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input 
-                type="text" 
-                id="username" 
-                name="username" 
-                onChange ={handleInput}
-                required 
-                />
+                <label htmlFor="fullName">Email</label>
+                <input type="fullName" id="fullName" name="fullName" onChange ={handleInput} required />
             </div>
+
             <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                onChange ={handleInput}
-                required 
-                />
+                <input type="email" id="email" name="email" onChange ={handleInput} required />
             </div>
+
             <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input 
-                type="password" 
-                id="password" 
-                name="password"
-                onChange ={handleInput} 
-                required 
-                />
+                <input type="password" id="password" name="password" onChange ={handleInput} required />
             </div>
             <div className="form-group">
-                <label htmlFor="confirm-password">Confirm Password</label>
-                <input 
-                type="password" 
-                id="password" 
-                name="password"
-                onChange ={handleInput} 
-                required 
-                />
+                <label htmlFor="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" onChange ={handleInput} required />
             </div>
+
             <CustomButton text="Sign Up" type="submit" className="sign-up-button" />
         </form>
         </div>
     );
- }
+}
 
-    export default SignUp;
+export default SignUp;
