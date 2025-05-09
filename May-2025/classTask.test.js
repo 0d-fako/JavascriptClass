@@ -9,3 +9,7 @@ test("Test isRotation with 2 digits string", () => {
     expect(isRotation("ab", "ba")).toBe(true);
 
 });
+
+test("Test isRotation with 3 digits string", () => {
+    expect(isRotation("123456", "612345")).toBe(true);
+});

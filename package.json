@@ -19,5 +19,8 @@
   },
   "dependencies": {
     "package.json": "file:"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
