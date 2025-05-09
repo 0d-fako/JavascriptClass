@@ -21,6 +21,8 @@ const Login = () => {
 
     console.log(loginData);
 
+
+
     return (
         <div className={style.login}>
         <h2>Login</h2>
@@ -34,6 +36,9 @@ const Login = () => {
                 <input type="password" id="password" name="password" onChange={handleChange} required />
             </div>
             <CustomButton text="Sign Up" type="submit" className="sign-up-button" />
+            <link to="/signup" className={style.link}>
+                Don't have an account? Sign Up  
+            </link>
         </form>
         </div>
     );
