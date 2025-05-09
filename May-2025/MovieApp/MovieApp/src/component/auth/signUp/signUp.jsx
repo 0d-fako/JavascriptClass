@@ -3,6 +3,7 @@ import style from "./signUp.module.css";
 import CustomButton from "../../../reuseable/CustomButton";
 import { useState } from "react";
 import { useSignupMutation } from "../../../service/userAuthApi";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const userDetails = {
@@ -131,9 +132,9 @@ const SignUp = () => {
           disabled={isLoading || !passwordsMatch}
         />
 
-        <link to="/login" className={style.link}>
+        <Link to="/login" className={style.link}>
           Already have an account? Login
-        </link>
+        </Link>
 
         {isError && (
           <p className={style.errorMessage}>
