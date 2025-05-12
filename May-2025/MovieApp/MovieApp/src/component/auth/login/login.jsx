@@ -2,7 +2,7 @@ import React from "react";
 import style from "./login.module.css";
 import CustomButton from "../../../reuseable/CustomButton";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const Login = () => {
   const loginDetails = {
@@ -45,7 +45,7 @@ const Login = () => {
             required
           />
         </div>
-        <CustomButton text="Sign Up" type="submit" className="sign-up-button" />
+        <CustomButton text="Login" type="submit" className="sign-up-button" />
         <Link to="/signup" className={style.link}>
           Don't have an account? Sign Up
         </Link>

@@ -3,9 +3,11 @@ import style from "./signUp.module.css";
 import CustomButton from "../../../reuseable/CustomButton";
 import { useState } from "react";
 import { useSignupMutation } from "../../../service/userAuthApi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const userDetails = {
     username: "",
     email: "",
@@ -41,16 +43,12 @@ const SignUp = () => {
       return;
     }
 
-    const payload = {
-      username: userData.username,
-      email: userData.email,
-      password: userData.password,
-      role: userData.role,
-      profile_picture: null,
-    };
-
     try {
-      const response = await signUp(payload).unwrap();
+      const response = await signUp(userData).unwrap();
+      console.log("Response:", response);
+      if (response.id) {
+        navigate("/login");
+      }
       console.log("Signup successful:", response);
     } catch (err) {
       console.error("Error signing up:", err);
