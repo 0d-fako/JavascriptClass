@@ -47,7 +47,7 @@ const Login = () => {
         </div>
         <CustomButton text="Login" type="submit" className="sign-up-button" />
         <Link to="/signup" className={style.link}>
-          Don't have an account? Sign Up
+          Dont have an account? Sign Up
         </Link>
       </form>
     </div>

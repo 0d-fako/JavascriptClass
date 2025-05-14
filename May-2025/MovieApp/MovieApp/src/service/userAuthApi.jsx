@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import SignUp from '../component/auth/signUp/signUp';
+// import SignUp from '../component/auth/signUp/signUp';
 
 const url = "http://localhost:5000";
 

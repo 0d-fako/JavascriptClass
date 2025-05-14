@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useGetMovies } from "../../service/movieAPI";
-import MovieCard from "../../reuseable/MovieCar";
+import MovieCard from "../../reuseable/MovieCard";
 
 const Movies = () => {
   const data = useGetMovies();

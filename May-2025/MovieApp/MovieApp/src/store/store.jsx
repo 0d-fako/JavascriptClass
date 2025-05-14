@@ -9,7 +9,10 @@ const store = configureStore({
     [movieAPI.reducerPath]: movieAPI.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(userAuthApiSlice.middleware),
+    getDefaultMiddleware().concat(
+      userAuthApiSlice.middleware,
+      movieAPI.middleware
+    ),
 });
 
 setupListeners(store.dispatch);
