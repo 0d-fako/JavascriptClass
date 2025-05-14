@@ -1,7 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const movieAPIKey = import.meta.env.VITE_MOVIE_API_KEY;
-const movieUrl = "https://api.themoviedb.org/3/movie";
 
 if (!movieAPIKey) {
   throw new Error("VITE_MOVIE_API_KEY is not defined");
@@ -10,41 +9,14 @@ if (!movieAPIKey) {
 export const movieAPI = createApi({
   reducerPath: "movieAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: `${movieUrl}`,
+    baseUrl: "https://api.themoviedb.org/3",
   }),
   endpoints: (builder) => ({
-    getMovies: builder.query({
-      query: () => `/movies?api_key=${movieAPIKey}`,
+    getPopularMovies: builder.query({
+      query: () => "/movie/popular?api_key=" + movieAPIKey,
+      transformResponse: (response) => response.results,
     }),
   }),
 });
 
-export const { useGetMovies } = movieAPI;
-
-// const movieAPI = createApi({
-//   reducerPath: "movieAPI",
-//   baseQuery: fetchBaseQuery({
-//     baseUrl: "https://api.themoviedb.org/3",
-//     prepareHeaders: (headers) => {
-//       headers.set("Authorization", `Bearer ${process.env.VITE_MOVIE_API_KEY}`);
-//       return headers;
-//     },
-//   }),
-//   endpoints: (builder) => ({
-//     getMovies: builder.query({
-//       query: () => "/movie/popular",
-//     }),
-//     getMovieDetails: builder.query({
-//       query: (id) => `/movie/${id}`,
-//     }),
-//     getMovieReviews: builder.query({
-//       query: (id) => `/movie/${id}/reviews`,
-//     }),
-//   }),
-// });
-
-// export const {
-//   useGetMoviesQuery,
-//   useGetMovieDetailsQuery,
-//   useGetMovieReviewsQuery,
-// } = movieAPI;
+export const { useGetPopularMoviesQuery } = movieAPI;

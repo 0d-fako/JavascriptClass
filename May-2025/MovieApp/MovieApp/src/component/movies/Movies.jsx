@@ -1,19 +1,18 @@
 import React from "react";
-
-import { useGetMovies } from "../../service/movieAPI";
+import { useGetPopularMoviesQuery } from "../../service/movieAPI";
 import MovieCard from "../../reuseable/MovieCard";
 
 const Movies = () => {
-  const data = useGetMovies();
-  const { data: movies, isLoading, isError } = data;
-  console.log(movies);
+  const { data: movies = [], isLoading, error } = useGetPopularMoviesQuery();
+
+  if (isLoading) return <div>Loading movies...</div>;
+  if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div>
-      <h1>Movies</h1>
-      <MovieCard data={data} />
-      {isLoading && <p>Loading...</p>}
-      {isError && <p>Error loading movies</p>}
+    <div className="movies-container">
+      {movies.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
+      ))}
     </div>
   );
 };

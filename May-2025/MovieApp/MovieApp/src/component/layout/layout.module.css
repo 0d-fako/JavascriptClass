@@ -19,3 +19,42 @@
   align-items: center;
   width: 30%;
 }
+
+
+.layOutWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
+}
+
+.sideBarLayout {
+  width: 250px;
+  background: #f0f0f0;
+}
+
+.contentArea {
+  flex: 1;
+  padding: 20px;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}

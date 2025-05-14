@@ -1,13 +1,15 @@
 import React from "react";
 
-const MovieCard = (props) => {
+const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
-      <img src={props.data.poster_path} alt={props.data.title} />
-      <h2>{props.data.title}</h2>
-      <p>{props.data.overview}</p>
-      <p>Release Date: {props.data.release_date}</p>
-      <p>Rating: {props.data.vote_average}</p>
+      <img
+        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        alt={movie.title}
+      />
+      <h3>{movie.title}</h3>
+      <p>{movie.overview}</p>
+      <p>Rating: {movie.vote_average}</p>
     </div>
   );
 };
