@@ -7,17 +7,19 @@ if (!movieAPIKey) {
   throw new Error("VITE_MOVIE_API_KEY is not defined");
 }
 
-const movieAPI = createApi({
+export const movieAPI = createApi({
   reducerPath: "movieAPI",
   baseQuery: fetchBaseQuery({
     baseUrl: `${movieUrl}`,
   }),
   endpoints: (builder) => ({
     getMovies: builder.query({
-      query: () => "/now_playing",
+      query: () => `/movies?api_key=${movieAPIKey}`,
     }),
   }),
 });
+
+export const { useGetMovies } = movieAPI;
 
 // const movieAPI = createApi({
 //   reducerPath: "movieAPI",
