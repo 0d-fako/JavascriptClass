@@ -17,13 +17,12 @@ async function calculate() {
     return;
   }
 
-  
   const operationMap = {
     "+": "add",
     "-": "subtract",
     "*": "multiply",
     "/": "divide",
-  s};
+  };
   const operation = operationMap[operator];
 
   try {
