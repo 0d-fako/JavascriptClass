@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const MovieCard = ({ movie }) => {
   return (
@@ -13,5 +14,14 @@ const MovieCard = ({ movie }) => {
     </div>
   );
 };
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    poster_path: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    overview: PropTypes.string,
+    vote_average: PropTypes.number
+  }).isRequired
+};
 
 export default MovieCard;
+
